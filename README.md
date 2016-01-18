@@ -1,0 +1,1 @@
+# struts1XMLvalidation1
