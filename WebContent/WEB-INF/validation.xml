@@ -15,9 +15,7 @@
     </global>
     <formset>
         <form name="LoginForm">
-            <field
-                property="username"
-                >
+            <field property="username" >
                     <arg key="LoginForm.username"/>
             </field>
             <field
@@ -26,7 +24,8 @@
                     <arg key="LoginForm.password"/>
                     <var>
                         <var-name>mask</var-name>
-                        <var-value>^[0-9a-zA-Z]*$</var-value>
+                        <var-value>^[^=!\$&amp;&lt;&gt;]*$</var-value>
+                        <!-- Above regex meaning is, there should not be =><& -->
                     </var>
             </field>
         </form>
